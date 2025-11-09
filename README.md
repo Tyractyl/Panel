@@ -2,7 +2,7 @@
 
 Tyractyl® is a free, open-source game server management panel built with PHP, React, and Go. Designed with security in mind, Tyractyl runs all game servers in isolated Docker containers while exposing a beautiful and intuitive UI to end users.
 
-This is a fork of Pterodactyl with modernized UI and custom branding.
+This is a modern game server management panel with custom branding and enhanced UI.
 
 ## Project Structure
 
@@ -237,10 +237,10 @@ For detailed daemon installation instructions, see the [Daemon Repository](https
 
 ## License
 
-Tyractyl® Copyright © 2015 - 2022 Dane Everitt and contributors.
+Tyractyl® Copyright © 2025 Mattias Micu.
 
 Code released under the MIT License.
 
 ## Acknowledgments
 
-This project is based on the excellent work done by the [Pterodactyl](https://github.com/pterodactyl) team.
+
