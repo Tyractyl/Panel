@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Helpers;
+namespace Tyractyl\Helpers;
 
 use Carbon\Carbon;
 use Cron\CronExpression;

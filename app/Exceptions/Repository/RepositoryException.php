@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Repository;
+namespace Tyractyl\Exceptions\Repository;
 
-use Pterodactyl\Exceptions\PterodactylException;
+use Tyractyl\Exceptions\PterodactylException;
 
 class RepositoryException extends PterodactylException
 {

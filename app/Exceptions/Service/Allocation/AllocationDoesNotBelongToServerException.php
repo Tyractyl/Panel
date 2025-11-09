@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Service\Allocation;
+namespace Tyractyl\Exceptions\Service\Allocation;
 
-use Pterodactyl\Exceptions\PterodactylException;
+use Tyractyl\Exceptions\PterodactylException;
 
 class AllocationDoesNotBelongToServerException extends PterodactylException
 {

@@ -7,7 +7,7 @@ return [
     |--------------------------------------------------------------------------
     | Application Version
     |--------------------------------------------------------------------------
-    | This value is set when creating a Pterodactyl release. You should not
+    | This value is set when creating a Tyractyl release. You should not
     | change this value if you are not maintaining your own internal versions.
     */
 
@@ -24,7 +24,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Pterodactyl'),
+    'name' => env('APP_NAME', 'Tyractyl'),
 
     /*
     |--------------------------------------------------------------------------
@@ -191,16 +191,16 @@ return [
         /*
          * Application Service Providers...
          */
-        Pterodactyl\Providers\ActivityLogServiceProvider::class,
-        Pterodactyl\Providers\AppServiceProvider::class,
-        Pterodactyl\Providers\AuthServiceProvider::class,
-        Pterodactyl\Providers\BackupsServiceProvider::class,
-        Pterodactyl\Providers\BladeServiceProvider::class,
-        Pterodactyl\Providers\EventServiceProvider::class,
-        Pterodactyl\Providers\HashidsServiceProvider::class,
-        Pterodactyl\Providers\RouteServiceProvider::class,
-        Pterodactyl\Providers\RepositoryServiceProvider::class,
-        Pterodactyl\Providers\ViewComposerServiceProvider::class,
+        Tyractyl\Providers\ActivityLogServiceProvider::class,
+        Tyractyl\Providers\AppServiceProvider::class,
+        Tyractyl\Providers\AuthServiceProvider::class,
+        Tyractyl\Providers\BackupsServiceProvider::class,
+        Tyractyl\Providers\BladeServiceProvider::class,
+        Tyractyl\Providers\EventServiceProvider::class,
+        Tyractyl\Providers\HashidsServiceProvider::class,
+        Tyractyl\Providers\RouteServiceProvider::class,
+        Tyractyl\Providers\RepositoryServiceProvider::class,
+        Tyractyl\Providers\ViewComposerServiceProvider::class,
 
         /*
          * Additional Dependencies
@@ -223,11 +223,11 @@ return [
         'Alert' => Prologue\Alerts\Facades\Alert::class,
         'Carbon' => Carbon\Carbon::class,
         'JavaScript' => Laracasts\Utilities\JavaScript\JavaScriptFacade::class,
-        'Theme' => Pterodactyl\Extensions\Facades\Theme::class,
+        'Theme' => Tyractyl\Extensions\Facades\Theme::class,
 
         // Custom Facades
-        'Activity' => Pterodactyl\Facades\Activity::class,
-        'LogBatch' => Pterodactyl\Facades\LogBatch::class,
-        'LogTarget' => Pterodactyl\Facades\LogTarget::class,
+        'Activity' => Tyractyl\Facades\Activity::class,
+        'LogBatch' => Tyractyl\Facades\LogBatch::class,
+        'LogTarget' => Tyractyl\Facades\LogTarget::class,
     ])->toArray(),
 ];

@@ -1,12 +1,12 @@
 <?php
 
-namespace Pterodactyl\Models;
+namespace Tyractyl\Models;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
- * Pterodactyl\Models\Allocation.
+ * Tyractyl\Models\Allocation.
  *
  * @property int $id
  * @property int $node_id

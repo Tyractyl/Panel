@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Service\Database;
+namespace Tyractyl\Exceptions\Service\Database;
 
-use Pterodactyl\Exceptions\DisplayException;
+use Tyractyl\Exceptions\DisplayException;
 
 class NoSuitableDatabaseHostException extends DisplayException
 {

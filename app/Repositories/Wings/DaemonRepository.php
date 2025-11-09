@@ -1,16 +1,16 @@
 <?php
 
-namespace Pterodactyl\Repositories\Wings;
+namespace Tyractyl\Repositories\Wings;
 
 use GuzzleHttp\Client;
-use Pterodactyl\Models\Node;
+use Tyractyl\Models\Node;
 use Webmozart\Assert\Assert;
-use Pterodactyl\Models\Server;
+use Tyractyl\Models\Server;
 use Illuminate\Contracts\Foundation\Application;
 
 /**
- * @method \Pterodactyl\Repositories\Wings\DaemonRepository setNode(\Pterodactyl\Models\Node $node)
- * @method \Pterodactyl\Repositories\Wings\DaemonRepository setServer(\Pterodactyl\Models\Server $server)
+ * @method \Tyractyl\Repositories\Wings\DaemonRepository setNode(\Tyractyl\Models\Node $node)
+ * @method \Tyractyl\Repositories\Wings\DaemonRepository setServer(\Tyractyl\Models\Server $server)
  */
 abstract class DaemonRepository
 {

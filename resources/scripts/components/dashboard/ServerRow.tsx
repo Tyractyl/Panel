@@ -17,22 +17,22 @@ const isAlarmState = (current: number, limit: number): boolean => limit > 0 && c
 
 const Icon = memo(
     styled(FontAwesomeIcon)<{ $alarm: boolean }>`
-        ${(props) => (props.$alarm ? tw`text-red-400` : tw`text-neutral-500`)};
+        ${(props) => (props.$alarm ? tw`text-red-500` : tw`text-gray-500`)};
     `,
     isEqual
 );
 
 const IconDescription = styled.p<{ $alarm: boolean }>`
     ${tw`text-sm ml-2`};
-    ${(props) => (props.$alarm ? tw`text-white` : tw`text-neutral-400`)};
+    ${(props) => (props.$alarm ? tw`text-red-600 font-medium` : tw`text-gray-600`)};
 `;
 
-const StatusIndicatorBox = styled(GreyRowBox)<{ $status: ServerPowerState | undefined }>`
-    ${tw`grid grid-cols-12 gap-4 relative`};
+const StatusIndicatorBox = styled.div<{ $status: ServerPowerState | undefined }>`
+    ${tw`bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-200 relative overflow-hidden`};
 
     & .status-bar {
-        ${tw`w-2 bg-red-500 absolute right-0 z-20 rounded-full m-1 opacity-50 transition-all duration-150`};
-        height: calc(100% - 0.5rem);
+        ${tw`w-1 absolute right-0 z-20 rounded-full m-2 opacity-60 transition-all duration-200`};
+        height: calc(100% - 1rem);
 
         ${({ $status }) =>
             !$status || $status === 'offline'
@@ -43,7 +43,11 @@ const StatusIndicatorBox = styled(GreyRowBox)<{ $status: ServerPowerState | unde
     }
 
     &:hover .status-bar {
-        ${tw`opacity-75`};
+        ${tw`opacity-80`};
+    }
+
+    &:hover {
+        ${tw`border-gray-300 shadow-md`};
     }
 `;
 
@@ -95,16 +99,16 @@ export default ({ server, className }: { server: Server; className?: string }) =
                     <FontAwesomeIcon icon={faServer} />
                 </div>
                 <div>
-                    <p css={tw`text-lg break-words`}>{server.name}</p>
+                    <p css={tw`text-lg font-semibold text-gray-900 break-words`}>{server.name}</p>
                     {!!server.description && (
-                        <p css={tw`text-sm text-neutral-300 break-words line-clamp-2`}>{server.description}</p>
+                        <p css={tw`text-sm text-gray-600 break-words line-clamp-2`}>{server.description}</p>
                     )}
                 </div>
             </div>
             <div css={tw`flex-1 ml-4 lg:block lg:col-span-2 hidden`}>
                 <div css={tw`flex justify-center`}>
-                    <FontAwesomeIcon icon={faEthernet} css={tw`text-neutral-500`} />
-                    <p css={tw`text-sm text-neutral-400 ml-2`}>
+                    <FontAwesomeIcon icon={faEthernet} css={tw`text-gray-500`} />
+                    <p css={tw`text-sm text-gray-600 ml-2 font-mono`}>
                         {server.allocations
                             .filter((alloc) => alloc.isDefault)
                             .map((allocation) => (
@@ -119,13 +123,13 @@ export default ({ server, className }: { server: Server; className?: string }) =
                 {!stats || isSuspended ? (
                     isSuspended ? (
                         <div css={tw`flex-1 text-center`}>
-                            <span css={tw`bg-red-500 rounded px-2 py-1 text-red-100 text-xs`}>
+                            <span css={tw`bg-red-100 text-red-800 rounded-md px-3 py-1 text-xs font-medium`}>
                                 {server.status === 'suspended' ? 'Suspended' : 'Connection Error'}
                             </span>
                         </div>
                     ) : server.isTransferring || server.status ? (
                         <div css={tw`flex-1 text-center`}>
-                            <span css={tw`bg-neutral-500 rounded px-2 py-1 text-neutral-100 text-xs`}>
+                            <span css={tw`bg-gray-100 text-gray-800 rounded-md px-3 py-1 text-xs font-medium`}>
                                 {server.isTransferring
                                     ? 'Transferring'
                                     : server.status === 'installing'

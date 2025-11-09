@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Extensions\Themes;
+namespace Tyractyl\Extensions\Themes;
 
 class Theme
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Pterodactyl\Services\Deployment;
+namespace Tyractyl\Services\Deployment;
 
-use Pterodactyl\Models\Allocation;
-use Pterodactyl\Exceptions\DisplayException;
-use Pterodactyl\Services\Allocations\AssignmentService;
-use Pterodactyl\Contracts\Repository\AllocationRepositoryInterface;
-use Pterodactyl\Exceptions\Service\Deployment\NoViableAllocationException;
+use Tyractyl\Models\Allocation;
+use Tyractyl\Exceptions\DisplayException;
+use Tyractyl\Services\Allocations\AssignmentService;
+use Tyractyl\Contracts\Repository\AllocationRepositoryInterface;
+use Tyractyl\Exceptions\Service\Deployment\NoViableAllocationException;
 
 class AllocationSelectionService
 {

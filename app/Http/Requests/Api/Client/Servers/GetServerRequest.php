@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Client\Servers;
+namespace Tyractyl\Http\Requests\Api\Client\Servers;
 
-use Pterodactyl\Http\Requests\Api\Client\ClientApiRequest;
+use Tyractyl\Http\Requests\Api\Client\ClientApiRequest;
 
 class GetServerRequest extends ClientApiRequest
 {

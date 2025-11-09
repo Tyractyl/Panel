@@ -1,21 +1,21 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Admin;
+namespace Tyractyl\Http\Controllers\Admin;
 
 use Exception;
 use Illuminate\View\View;
-use Pterodactyl\Models\DatabaseHost;
+use Tyractyl\Models\DatabaseHost;
 use Illuminate\Http\RedirectResponse;
 use Prologue\Alerts\AlertsMessageBag;
 use Illuminate\View\Factory as ViewFactory;
-use Pterodactyl\Http\Controllers\Controller;
-use Pterodactyl\Services\Databases\Hosts\HostUpdateService;
-use Pterodactyl\Http\Requests\Admin\DatabaseHostFormRequest;
-use Pterodactyl\Services\Databases\Hosts\HostCreationService;
-use Pterodactyl\Services\Databases\Hosts\HostDeletionService;
-use Pterodactyl\Contracts\Repository\DatabaseRepositoryInterface;
-use Pterodactyl\Contracts\Repository\LocationRepositoryInterface;
-use Pterodactyl\Contracts\Repository\DatabaseHostRepositoryInterface;
+use Tyractyl\Http\Controllers\Controller;
+use Tyractyl\Services\Databases\Hosts\HostUpdateService;
+use Tyractyl\Http\Requests\Admin\DatabaseHostFormRequest;
+use Tyractyl\Services\Databases\Hosts\HostCreationService;
+use Tyractyl\Services\Databases\Hosts\HostDeletionService;
+use Tyractyl\Contracts\Repository\DatabaseRepositoryInterface;
+use Tyractyl\Contracts\Repository\LocationRepositoryInterface;
+use Tyractyl\Contracts\Repository\DatabaseHostRepositoryInterface;
 
 class DatabaseController extends Controller
 {
@@ -48,7 +48,7 @@ class DatabaseController extends Controller
     /**
      * Display database host to user.
      *
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Tyractyl\Exceptions\Repository\RecordNotFoundException
      */
     public function view(int $host): View
     {
@@ -117,7 +117,7 @@ class DatabaseController extends Controller
     /**
      * Handle request to delete a database host.
      *
-     * @throws \Pterodactyl\Exceptions\Service\HasActiveServersException
+     * @throws \Tyractyl\Exceptions\Service\HasActiveServersException
      */
     public function delete(int $host): RedirectResponse
     {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Console\Commands;
+namespace Tyractyl\Console\Commands;
 
 use Illuminate\Console\Command;
-use Pterodactyl\Console\Kernel;
+use Tyractyl\Console\Kernel;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Console\Helper\ProgressBar;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Pterodactyl\Services\Databases\Hosts;
+namespace Tyractyl\Services\Databases\Hosts;
 
-use Pterodactyl\Exceptions\Service\HasActiveServersException;
-use Pterodactyl\Contracts\Repository\DatabaseRepositoryInterface;
-use Pterodactyl\Contracts\Repository\DatabaseHostRepositoryInterface;
+use Tyractyl\Exceptions\Service\HasActiveServersException;
+use Tyractyl\Contracts\Repository\DatabaseRepositoryInterface;
+use Tyractyl\Contracts\Repository\DatabaseHostRepositoryInterface;
 
 class HostDeletionService
 {

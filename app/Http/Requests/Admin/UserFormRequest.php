@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Admin;
+namespace Tyractyl\Http\Requests\Admin;
 
-use Pterodactyl\Models\User;
+use Tyractyl\Models\User;
 use Illuminate\Support\Collection;
 
 class UserFormRequest extends AdminFormRequest

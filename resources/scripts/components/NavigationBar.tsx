@@ -17,17 +17,24 @@ const RightNavigation = styled.div`
     & > a,
     & > button,
     & > .navigation-link {
-        ${tw`flex items-center h-full no-underline text-neutral-300 px-6 cursor-pointer transition-all duration-150`};
+        ${tw`flex items-center h-full no-underline text-gray-600 px-5 cursor-pointer transition-all duration-200 relative`};
 
         &:active,
         &:hover {
-            ${tw`text-neutral-100 bg-black`};
+            ${tw`text-gray-900 bg-gray-50`};
         }
 
         &:active,
         &:hover,
         &.active {
-            box-shadow: inset 0 -2px ${theme`colors.cyan.600`.toString()};
+            &::after {
+                content: '';
+                ${tw`absolute bottom-0 left-0 right-0 h-0.5 bg-primary-600`};
+            }
+        }
+
+        &.active {
+            ${tw`text-primary-600`};
         }
     }
 `;
@@ -46,14 +53,14 @@ export default () => {
     };
 
     return (
-        <div className={'w-full bg-neutral-900 shadow-md overflow-x-auto'}>
+        <div className={'w-full bg-white border-b border-gray-200 shadow-sm overflow-x-auto'}>
             <SpinnerOverlay visible={isLoggingOut} />
-            <div className={'mx-auto w-full flex items-center h-[3.5rem] max-w-[1200px]'}>
+            <div className={'mx-auto w-full flex items-center h-16 max-w-7xl'}>
                 <div id={'logo'} className={'flex-1'}>
                     <Link
                         to={'/'}
                         className={
-                            'text-2xl font-header px-4 no-underline text-neutral-200 hover:text-neutral-100 transition-colors duration-150'
+                            'text-2xl font-header px-6 no-underline text-gray-900 hover:text-primary-600 transition-colors duration-200 font-semibold'
                         }
                     >
                         {name}

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Models\Objects;
+namespace Tyractyl\Models\Objects;
 
 class DeploymentObject
 {

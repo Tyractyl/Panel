@@ -1,42 +1,42 @@
 <?php
 
-namespace Pterodactyl\Providers;
+namespace Tyractyl\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Pterodactyl\Repositories\Eloquent\EggRepository;
-use Pterodactyl\Repositories\Eloquent\NestRepository;
-use Pterodactyl\Repositories\Eloquent\NodeRepository;
-use Pterodactyl\Repositories\Eloquent\TaskRepository;
-use Pterodactyl\Repositories\Eloquent\UserRepository;
-use Pterodactyl\Repositories\Eloquent\ApiKeyRepository;
-use Pterodactyl\Repositories\Eloquent\ServerRepository;
-use Pterodactyl\Repositories\Eloquent\SessionRepository;
-use Pterodactyl\Repositories\Eloquent\SubuserRepository;
-use Pterodactyl\Repositories\Eloquent\DatabaseRepository;
-use Pterodactyl\Repositories\Eloquent\LocationRepository;
-use Pterodactyl\Repositories\Eloquent\ScheduleRepository;
-use Pterodactyl\Repositories\Eloquent\SettingsRepository;
-use Pterodactyl\Repositories\Eloquent\AllocationRepository;
-use Pterodactyl\Contracts\Repository\EggRepositoryInterface;
-use Pterodactyl\Repositories\Eloquent\EggVariableRepository;
-use Pterodactyl\Contracts\Repository\NestRepositoryInterface;
-use Pterodactyl\Contracts\Repository\NodeRepositoryInterface;
-use Pterodactyl\Contracts\Repository\TaskRepositoryInterface;
-use Pterodactyl\Contracts\Repository\UserRepositoryInterface;
-use Pterodactyl\Repositories\Eloquent\DatabaseHostRepository;
-use Pterodactyl\Contracts\Repository\ApiKeyRepositoryInterface;
-use Pterodactyl\Contracts\Repository\ServerRepositoryInterface;
-use Pterodactyl\Repositories\Eloquent\ServerVariableRepository;
-use Pterodactyl\Contracts\Repository\SessionRepositoryInterface;
-use Pterodactyl\Contracts\Repository\SubuserRepositoryInterface;
-use Pterodactyl\Contracts\Repository\DatabaseRepositoryInterface;
-use Pterodactyl\Contracts\Repository\LocationRepositoryInterface;
-use Pterodactyl\Contracts\Repository\ScheduleRepositoryInterface;
-use Pterodactyl\Contracts\Repository\SettingsRepositoryInterface;
-use Pterodactyl\Contracts\Repository\AllocationRepositoryInterface;
-use Pterodactyl\Contracts\Repository\EggVariableRepositoryInterface;
-use Pterodactyl\Contracts\Repository\DatabaseHostRepositoryInterface;
-use Pterodactyl\Contracts\Repository\ServerVariableRepositoryInterface;
+use Tyractyl\Repositories\Eloquent\EggRepository;
+use Tyractyl\Repositories\Eloquent\NestRepository;
+use Tyractyl\Repositories\Eloquent\NodeRepository;
+use Tyractyl\Repositories\Eloquent\TaskRepository;
+use Tyractyl\Repositories\Eloquent\UserRepository;
+use Tyractyl\Repositories\Eloquent\ApiKeyRepository;
+use Tyractyl\Repositories\Eloquent\ServerRepository;
+use Tyractyl\Repositories\Eloquent\SessionRepository;
+use Tyractyl\Repositories\Eloquent\SubuserRepository;
+use Tyractyl\Repositories\Eloquent\DatabaseRepository;
+use Tyractyl\Repositories\Eloquent\LocationRepository;
+use Tyractyl\Repositories\Eloquent\ScheduleRepository;
+use Tyractyl\Repositories\Eloquent\SettingsRepository;
+use Tyractyl\Repositories\Eloquent\AllocationRepository;
+use Tyractyl\Contracts\Repository\EggRepositoryInterface;
+use Tyractyl\Repositories\Eloquent\EggVariableRepository;
+use Tyractyl\Contracts\Repository\NestRepositoryInterface;
+use Tyractyl\Contracts\Repository\NodeRepositoryInterface;
+use Tyractyl\Contracts\Repository\TaskRepositoryInterface;
+use Tyractyl\Contracts\Repository\UserRepositoryInterface;
+use Tyractyl\Repositories\Eloquent\DatabaseHostRepository;
+use Tyractyl\Contracts\Repository\ApiKeyRepositoryInterface;
+use Tyractyl\Contracts\Repository\ServerRepositoryInterface;
+use Tyractyl\Repositories\Eloquent\ServerVariableRepository;
+use Tyractyl\Contracts\Repository\SessionRepositoryInterface;
+use Tyractyl\Contracts\Repository\SubuserRepositoryInterface;
+use Tyractyl\Contracts\Repository\DatabaseRepositoryInterface;
+use Tyractyl\Contracts\Repository\LocationRepositoryInterface;
+use Tyractyl\Contracts\Repository\ScheduleRepositoryInterface;
+use Tyractyl\Contracts\Repository\SettingsRepositoryInterface;
+use Tyractyl\Contracts\Repository\AllocationRepositoryInterface;
+use Tyractyl\Contracts\Repository\EggVariableRepositoryInterface;
+use Tyractyl\Contracts\Repository\DatabaseHostRepositoryInterface;
+use Tyractyl\Contracts\Repository\ServerVariableRepositoryInterface;
 
 class RepositoryServiceProvider extends ServiceProvider
 {

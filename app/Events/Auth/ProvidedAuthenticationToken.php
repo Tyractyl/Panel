@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Events\Auth;
+namespace Tyractyl\Events\Auth;
 
-use Pterodactyl\Models\User;
-use Pterodactyl\Events\Event;
+use Tyractyl\Models\User;
+use Tyractyl\Events\Event;
 
 class ProvidedAuthenticationToken extends Event
 {

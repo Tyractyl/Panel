@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Exceptions;
+namespace Tyractyl\Exceptions;
 
 class PterodactylException extends \Exception
 {

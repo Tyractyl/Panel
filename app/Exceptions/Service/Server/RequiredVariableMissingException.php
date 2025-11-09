@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Service\Server;
+namespace Tyractyl\Exceptions\Service\Server;
 
-use Pterodactyl\Exceptions\PterodactylException;
+use Tyractyl\Exceptions\PterodactylException;
 
 class RequiredVariableMissingException extends PterodactylException
 {

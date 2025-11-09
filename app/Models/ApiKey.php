@@ -1,15 +1,15 @@
 <?php
 
-namespace Pterodactyl\Models;
+namespace Tyractyl\Models;
 
 use Illuminate\Support\Str;
 use Webmozart\Assert\Assert;
-use Pterodactyl\Services\Acl\Api\AdminAcl;
+use Tyractyl\Services\Acl\Api\AdminAcl;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
- * Pterodactyl\Models\ApiKey.
+ * Tyractyl\Models\ApiKey.
  *
  * @property int $id
  * @property int $user_id

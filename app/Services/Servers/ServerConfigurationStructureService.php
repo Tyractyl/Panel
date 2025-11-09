@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Services\Servers;
+namespace Tyractyl\Services\Servers;
 
-use Pterodactyl\Models\Mount;
-use Pterodactyl\Models\Server;
+use Tyractyl\Models\Mount;
+use Tyractyl\Models\Server;
 
 class ServerConfigurationStructureService
 {

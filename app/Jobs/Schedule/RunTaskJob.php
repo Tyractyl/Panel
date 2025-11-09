@@ -1,19 +1,19 @@
 <?php
 
-namespace Pterodactyl\Jobs\Schedule;
+namespace Tyractyl\Jobs\Schedule;
 
 use Exception;
-use Pterodactyl\Jobs\Job;
+use Tyractyl\Jobs\Job;
 use Carbon\CarbonImmutable;
-use Pterodactyl\Models\Task;
+use Tyractyl\Models\Task;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use Pterodactyl\Services\Backups\InitiateBackupService;
-use Pterodactyl\Repositories\Wings\DaemonPowerRepository;
-use Pterodactyl\Repositories\Wings\DaemonCommandRepository;
-use Pterodactyl\Exceptions\Http\Connection\DaemonConnectionException;
+use Tyractyl\Services\Backups\InitiateBackupService;
+use Tyractyl\Repositories\Wings\DaemonPowerRepository;
+use Tyractyl\Repositories\Wings\DaemonCommandRepository;
+use Tyractyl\Exceptions\Http\Connection\DaemonConnectionException;
 
 class RunTaskJob extends Job implements ShouldQueue
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Servers;
+namespace Tyractyl\Http\Requests\Api\Application\Servers;
 
-use Pterodactyl\Models\Server;
+use Tyractyl\Models\Server;
 
 class UpdateServerDetailsRequest extends ServerWriteRequest
 {

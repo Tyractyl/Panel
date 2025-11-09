@@ -1,6 +1,6 @@
 import * as React from 'react';
-import tw, { TwStyle } from 'twin.macro';
-import styled from 'styled-components/macro';
+import { CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, XCircleIcon } from '@heroicons/react/24/outline';
+import tw from 'twin.macro';
 
 export type FlashMessageType = 'success' | 'info' | 'warning' | 'error';
 
@@ -8,60 +8,68 @@ interface Props {
     title?: string;
     children: string;
     type?: FlashMessageType;
+    className?: string;
 }
 
-const styling = (type?: FlashMessageType): TwStyle | string => {
-    switch (type) {
-        case 'error':
-            return tw`bg-red-600 border-red-800`;
-        case 'info':
-            return tw`bg-primary-600 border-primary-800`;
-        case 'success':
-            return tw`bg-green-600 border-green-800`;
-        case 'warning':
-            return tw`bg-yellow-600 border-yellow-800`;
-        default:
-            return '';
-    }
+const MessageBox = ({ title, children, type, className }: Props) => {
+    const getStyles = () => {
+        switch (type) {
+            case 'error':
+                return 'border-red-200 bg-red-50 text-red-800';
+            case 'warning':
+                return 'border-yellow-200 bg-yellow-50 text-yellow-800';
+            case 'success':
+                return 'border-green-200 bg-green-50 text-green-800';
+            case 'info':
+                return 'border-primary-200 bg-primary-50 text-primary-800';
+            default:
+                return 'border-gray-200 bg-gray-50 text-gray-800';
+        }
+    };
+
+    const getIcon = () => {
+        const iconClass = 'w-5 h-5 flex-shrink-0';
+        
+        switch (type) {
+            case 'error':
+                return <XCircleIcon className={`${iconClass} text-red-600`} />;
+            case 'warning':
+                return <ExclamationTriangleIcon className={`${iconClass} text-yellow-600`} />;
+            case 'success':
+                return <CheckCircleIcon className={`${iconClass} text-green-600`} />;
+            case 'info':
+                return <InformationCircleIcon className={`${iconClass} text-primary-600`} />;
+            default:
+                return <InformationCircleIcon className={`${iconClass} text-gray-600`} />;
+        }
+    };
+
+    return (
+        <div
+            className={`
+                flex items-start p-4 border rounded-lg shadow-sm
+                ${getStyles()}
+                ${className || ''}
+            `}
+            role="alert"
+        >
+            <div className="flex-shrink-0">
+                {getIcon()}
+            </div>
+            <div className="ml-3 flex-1">
+                {title && (
+                    <h3 className="text-sm font-medium">
+                        {title}
+                    </h3>
+                )}
+                <div className="text-sm mt-1">
+                    {children}
+                </div>
+            </div>
+        </div>
+    );
 };
 
-const getBackground = (type?: FlashMessageType): TwStyle | string => {
-    switch (type) {
-        case 'error':
-            return tw`bg-red-500`;
-        case 'info':
-            return tw`bg-primary-500`;
-        case 'success':
-            return tw`bg-green-500`;
-        case 'warning':
-            return tw`bg-yellow-500`;
-        default:
-            return '';
-    }
-};
-
-const Container = styled.div<{ $type?: FlashMessageType }>`
-    ${tw`p-2 border items-center leading-normal rounded flex w-full text-sm text-white`};
-    ${(props) => styling(props.$type)};
-`;
-Container.displayName = 'MessageBox.Container';
-
-const MessageBox = ({ title, children, type }: Props) => (
-    <Container css={tw`lg:inline-flex`} $type={type} role={'alert'}>
-        {title && (
-            <span
-                className={'title'}
-                css={[
-                    tw`flex rounded-full uppercase px-2 py-1 text-xs font-bold mr-3 leading-none`,
-                    getBackground(type),
-                ]}
-            >
-                {title}
-            </span>
-        )}
-        <span css={tw`mr-2 text-left flex-auto`}>{children}</span>
-    </Container>
-);
 MessageBox.displayName = 'MessageBox';
 
 export default MessageBox;

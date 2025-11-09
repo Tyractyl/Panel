@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Events\Server;
+namespace Tyractyl\Events\Server;
 
-use Pterodactyl\Events\Event;
-use Pterodactyl\Models\Server;
+use Tyractyl\Events\Event;
+use Tyractyl\Models\Server;
 use Illuminate\Queue\SerializesModels;
 
 class Installed extends Event

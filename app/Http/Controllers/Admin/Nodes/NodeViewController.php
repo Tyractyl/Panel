@@ -1,20 +1,20 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Admin\Nodes;
+namespace Tyractyl\Http\Controllers\Admin\Nodes;
 
 use Illuminate\View\View;
 use Illuminate\Http\Request;
-use Pterodactyl\Models\Node;
+use Tyractyl\Models\Node;
 use Illuminate\Support\Collection;
-use Pterodactyl\Models\Allocation;
-use Pterodactyl\Http\Controllers\Controller;
+use Tyractyl\Models\Allocation;
+use Tyractyl\Http\Controllers\Controller;
 use Illuminate\Contracts\View\Factory as ViewFactory;
-use Pterodactyl\Repositories\Eloquent\NodeRepository;
-use Pterodactyl\Repositories\Eloquent\ServerRepository;
-use Pterodactyl\Traits\Controllers\JavascriptInjection;
-use Pterodactyl\Services\Helpers\SoftwareVersionService;
-use Pterodactyl\Repositories\Eloquent\LocationRepository;
-use Pterodactyl\Repositories\Eloquent\AllocationRepository;
+use Tyractyl\Repositories\Eloquent\NodeRepository;
+use Tyractyl\Repositories\Eloquent\ServerRepository;
+use Tyractyl\Traits\Controllers\JavascriptInjection;
+use Tyractyl\Services\Helpers\SoftwareVersionService;
+use Tyractyl\Repositories\Eloquent\LocationRepository;
+use Tyractyl\Repositories\Eloquent\AllocationRepository;
 
 class NodeViewController extends Controller
 {

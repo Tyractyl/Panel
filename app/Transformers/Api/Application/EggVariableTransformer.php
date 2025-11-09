@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Application;
+namespace Tyractyl\Transformers\Api\Application;
 
-use Pterodactyl\Models\Egg;
-use Pterodactyl\Models\EggVariable;
+use Tyractyl\Models\Egg;
+use Tyractyl\Models\EggVariable;
 
 class EggVariableTransformer extends BaseTransformer
 {
